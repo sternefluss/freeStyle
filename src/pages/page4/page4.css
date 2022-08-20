@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.canvas{
+    display: flex;                          /** 弹性布局 */
+    justify-content: center;                /** 居中排列 */
+    align-items: center;                    /** 居中对齐 */
+    min-height: 100vh;
+    background: #feea9d;    
+    /* 白天：feea9d   日：fea400  月：00e6ff  */
+    position: relative;
+}
+
+.container{
+    position: relative;
+    /* border: 1px solid red; */
+    /* overflow: hidden; */
+}
+
+.zero{
+    
+    position: relative;
+    /* border: 1px solid red; */
+    overflow: hidden;
+}
+
+.celestia{
+    height: 300px;
+    width: 450px;
+    display: flex;                          /** 弹性布局 */
+    justify-content: center;                /** 居中排列 */
+    align-items: center;                    /** 居中对齐 */
+
+}
+
+.sun{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    background-color: orange;
+    filter: drop-shadow( 0 0 10px orange);
+    border-radius: 50%;
+    transition: all 2s ease-in-out;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.moon{
+    position: absolute;
+    /* position: relative; */
+    margin: 0;
+    padding: 0;
+    height: 250px;
+    width: 250px;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    background-color: transparent;
+    /* 使用阴影生成月亮 */
+    box-shadow: 50px 70px 0 cyan;
+    filter: drop-shadow( 0 0 25px cyan);
+    transform: translate(calc(-50% + 75px),calc(-50% + 55px));
+    transition: all 2s ease-in-out;
+    cursor: pointer;
+}
+/* 使用伪元素生成月亮 */
+/* .moon::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    bottom: 70px;
+    right: 50px;
+    border: 1px solid red;
+    border-radius: 50%;
+    background-color: #040920;
+} */
+.mask{
+    height: 200px;
+    width: 500px;
+    position: absolute;
+    /* left: -50%; */
+    top: 80%;
+    /* 背景模糊的遮罩效果 */
+    backdrop-filter: blur(50px) ;
+    -webkit-backdrop-filter: blur(50px);
+    /* display: none; */
+}
+.active{
+    transition: all 2s ease-in-out;
+    transform: translate(0,500px);
+}
+
+.day{
+    transition: all 2s ease-in-out;
+    background: #feea9d;
+}
+.night{
+    transition: all 2s ease-in-out;
+    background-color: #040920;
+}

@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.canvas{
+    display: flex;                          /** 弹性布局 */
+    justify-content: center;                /** 居中排列 */
+    align-items: center;                    /** 居中对齐 */
+    min-height: 100vh;
+    background: #a2bfbd;    
+    position: relative;
+    flex-direction: column;
+}
+
+.search{
+    display: flex;                          /** 弹性布局 */
+    flex-direction: row;                    /* 呈行排布 */
+}
+
+.content{
+    height: 300px;
+    width: 600px;
+    border: 1px solid gainsboro;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.pagechange{
+    text-align: center;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+.table tr td{
+    display:inline-block;
+    height: 40px;        
+    line-height: 40px;
+    border-bottom: 1px solid gainsboro;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    
+}
+.play{
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    fill: currentColor;
+    overflow: hidden;
+    cursor: pointer;
+}

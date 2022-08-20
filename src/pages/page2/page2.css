@@ -1,0 +1,48 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wgth@700&display=swap'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.canvas{
+    display: flex;                          /** 弹性布局 */
+    justify-content: center;                /** 居中排列 */
+    align-items: center;                    /** 居中对齐 */
+    min-height: 100vh;
+    background: #361f3b;    
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;                              /*设置网格间距 详情：https://www.runoob.com/cssref/css3-pr-gap.html*/
+}
+.container li{
+    list-style: none;
+    cursor: pointer;
+    /* border: 1px solid red;   */
+}
+.container li span{
+    position: relative;
+    font-size: 2.5em;
+    line-height: 1em;
+    text-decoration: none;
+    text-transform: uppercase;             /* 控制文本大小写 可要可不要 详情：https://www.runoob.com/cssref/pr-text-text-transform.html*/  
+    color: transparent;                    /* 将字体设置为透明 */            
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);            /* 文字描边 */     
+}
+.container li span::before{
+    content: attr(data-text);
+    position: absolute;
+    color:  var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    /* border-right: 5px solid white; */
+    -webkit-text-stroke: 1px var(--clr); 
+}
+.container li span:hover::before{
+    width: 100%;
+    filter: drop-shadow( 0 0 25px var(--clr));
+}

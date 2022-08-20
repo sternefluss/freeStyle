@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.canvas{
+    display: flex;                          /** 弹性布局 */
+    justify-content: center;                /** 居中排列 */
+    align-items: center;                    /** 居中对齐 */
+    min-height: 100vh;
+    background: #393939;                 
+}
+.container{
+    width: 400px;
+    height: 70px;
+    background: #e4dccf;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.container ul{
+    display: flex;                          /* 弹性布局一定要有，否则内部元素会挤出范围外 */
+    width: 350px;
+}
+.container ul li{
+    width: 70px;
+    height: 70px;
+    list-style: none;                       /* 表格样式为空（就是把前面的黑点去除） */
+    /* background-color: #e4dccf; */
+    position: relative;
+    z-index: 1;
+}
+.container ul li a{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;                 /* 将a内部的元素灵活排列，column是指竖向灵活排列  */
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    text-decoration: none;
+}
+.container ul li a .icon{
+    display: block;
+    position: relative;
+    font-size: 1.5em;
+    line-height: 70px;
+    text-align: center;
+    transition: 0.5s;
+}
+.container ul li.active a .icon{
+    transform: translateY(-32px);
+}
+.container ul li a .text{
+    position: absolute;
+    font-weight: 400;
+    font-size: 0.75em;
+    line-height: 70px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.container ul li.active a .text{
+    opacity: 1;
+    transform: translateY(10px);
+}
+.indicator{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    top: -50%;
+    background: skyblue;
+    border-radius: 50%;
+    border: 6px solid #393939;
+    transition: 0.5;
+}
+/* 选中的tab边缘的圆角(左边)
+    本质是在蓝色圆前面画一个圆，加上外边框来遮盖掉尖锐的角
+*/
+.indicator::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 1px -10px 0 0 #393939;
+    /* border: 1px solid red; */         /* 加上该句查看阴影的外表看以理解 */
+}
+/* 选中的tab边缘的圆角(右边)*/
+.indicator::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: -1px -10px 0 0 #393939;
+}
+.container ul li.active ~ .indicator{
+    transition: 0.5s;
+}
+.container ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(70px * 0));
+}
+.container ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(70px * 1));
+}
+.container ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(70px * 2));
+}
+.container ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(70px * 3));
+}
+.container ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(70px * 4));
+}
+
+/* .container ul li a span{
+    
+} */

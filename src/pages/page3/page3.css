@@ -1,0 +1,83 @@
+/* @import 'https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css'; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.canvas{
+    display: flex;                          /** 弹性布局 */
+    justify-content: center;                /** 居中排列 */
+    align-items: center;                    /** 居中对齐 */
+    min-height: 100vh;
+    background: ghostwhite;    
+    position: relative;
+}
+.light{
+    width: 2000px;
+    height: 600px;
+    /* background-color: yellow; */
+    /* 裁剪图像让它变成三角形 */
+    clip-path: polygon(100% 50%,100% 50%,0 0,0 100%);
+    position: absolute;
+    top: 88px;
+    right: 110px;
+    transform: translateY(-50%) rotate(var(--light,0));
+    /* 设置旋转奇点 */
+    transform-origin: 100% 50%;
+    transition: transform 0.2s easepx-out ;
+}
+.container{
+    /* border: 1px solid red; */
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    height: 200px;
+    width: 400px;
+    display: flex;                          /** 弹性布局 */
+    justify-content: center;                /** 居中排列 */
+    align-items: center;                    /** 居中对齐 */
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 5px 5px 5px #888888;
+    z-index: 2;
+}
+.post,.login{
+    background-color: #6667ab;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    margin: 10px;
+    height: 25px;
+}
+.fa{
+    position:absolute;
+    right: 5px;
+    top: 3px;
+    color:gray;
+    cursor: pointer;        
+}
+.password{
+    position: relative;
+}
+/* 点击眼睛后的css */
+.showpwd{
+    display: flex;                          /** 弹性布局 */
+    justify-content: center;                /** 居中排列 */
+    align-items: center;                    /** 居中对齐 */
+    min-height: 100vh;
+    background: black;    
+    position: relative;
+}
+.showpwd .container{
+    background-color: black;
+    color: white;
+}
+.showpwd .container input{
+    background-color: black;
+    color: white;
+}
+.showpwd .container .light{
+    background-color: yellow;
+    opacity: 0.5;
+}

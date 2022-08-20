@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+.canvas{
+    display: flex;                          /** 弹性布局 */
+    justify-content: center;                /** 居中排列 */
+    align-items: center;                    /** 居中对齐 */
+    min-height: 100vh;
+    background: #664aff;    
+    position: relative;
+    flex-direction: column;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;                /** 居中排列 */
+    align-items: center;                    /** 居中对齐 */
+    height: 80px;
+    width: 320px;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    border-radius: 30px;
+    flex-direction: row;
+    background-color: white;
+    position: relative;
+}
+.value{
+    font-size: 18px;
+    color: #664aff;
+    font-weight: 600;
+}
+.range{
+    -webkit-appearance: none;
+    width: 75%;
+    height: 3px;
+    background-color: #ddd;
+    outline: none;
+}
+/* ::-webkit-slider-thumb是input内的伪样式用于设置滑块的样式 */
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #664aff;
+    cursor: pointer;
+}
+.sliderValue{
+    position: absolute;
+    top: -30px;
+    height: 45px;
+    width: 45px;
+    /* border: 3px solid white; */
+    display: flex;
+    justify-content: center;              
+    align-items: center;        
+    font-weight: 500;
+    color: white;     
+    z-index: 2;
+    /* 设置鼠标放上滚动条前的样式 scale(0) 缩放为0倍 */
+    transform: translateX(0%) scale(0);
+    /* 设置旋转元素的基点 */
+    transform-origin: bottom;    
+    transition: transform 0.5s ease-in-out;   
+}
+.show{
+    /* 鼠标放上滚动条后 scale(1) 缩放为1倍 */
+    transform: translateX(0%) scale(1);
+}
+.sliderValue::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #664aff;
+    border: 3px solid #fff;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    transform: translateX(0%) rotate(45deg);    
+    z-index: -1;
+    /* display: none; */
+}
+.box{
+    width: 192px;
+    position: absolute;
+    left: 41px;
+    top: 0px;
+    
+}
+.a1{
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 50px;
+}
+.a2{
+    position: relative;
+    top: -7px;
+    left: -7px;
+}
