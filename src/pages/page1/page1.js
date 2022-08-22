@@ -1,7 +1,11 @@
+import synopsis from '../../components/synopsis'
 export default {
   name: 'Page1',
   // https，http形式的外部js连接无法直接引入
   // 在vue加载完毕后在dom树上直接操作
+  components : {
+    synopsis
+  },
   mounted(){
     //创建一个script标签
     const s = document.createElement('script');                 

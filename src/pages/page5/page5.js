@@ -1,5 +1,9 @@
+import synopsis from '../../components/synopsis'
 export default {
     name: 'Page3',
+    components : {
+      synopsis
+    },
     mounted(){
       const sliderValue = document.querySelector('.sliderValue')
       const range = document.querySelector('.range')

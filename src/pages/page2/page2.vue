@@ -1,5 +1,6 @@
 <template>
-    <div class="canvas">           
+    <div class="canvas">    
+        <synopsis text="这是导航样式，鼠标接触可触发动画" color="orange"></synopsis>       
         <ul class="container">
             <li style="--clr:skyblue">
                 <span data-text="home">home</span>

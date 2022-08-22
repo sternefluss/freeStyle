@@ -1,5 +1,6 @@
 <template>
     <div class="canvas">
+        <synopsis text="这是切换页面主题的动画，点击图标切换日月" color="skyblue"></synopsis>
         <div class="container">
             <div class="zero">
                 <div class="celestia">

@@ -1,6 +1,10 @@
 import {getMusicInfoApi , playMusicApi} from  '../../request/api.js'
+import synopsis from '../../components/synopsis'
 export default {
     name: 'Page8',
+    components :{
+        synopsis
+    },
     data(){
         return{
             isOpened : false,       //判断详情是否打开

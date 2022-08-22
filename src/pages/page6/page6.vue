@@ -1,6 +1,7 @@
 <template>
     <div class="canvas">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">    
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">   
+        <synopsis text="这是调用了网易云api的搜索功能，输入关键词搜索歌曲，部分歌曲没有版权无法播放" color="tomato"></synopsis> 
         <div class="search">
             <input type="text"  class="form-control" placeholder="请输入搜索内容" v-model="searchValue">
             <button class="btn" @click="get()">搜索</button>

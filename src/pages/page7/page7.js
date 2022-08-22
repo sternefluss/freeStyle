@@ -1,5 +1,9 @@
+import synopsis from '../../components/synopsis'
 export default {
     name: 'Page3',
+    components : {
+        synopsis
+    },
     mounted(){
         let deg =6
         let hour = document.querySelector('.hour')

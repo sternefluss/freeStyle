@@ -10,7 +10,8 @@
     justify-content: center;                /** 居中排列 */
     align-items: center;                    /** 居中对齐 */
     min-height: 100vh;
-    background: #393939;                 
+    background: #393939;     
+    flex-direction: column;            
 }
 .container{
     width: 400px;

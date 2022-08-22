@@ -1,5 +1,6 @@
 <template>
     <div class="canvas">
+        <synopsis text="这是音量调节ui，已设置默认歌曲" color="yellow"></synopsis>
         <div class="container">
             <div class="a1">
                 <audio controls class="a2">

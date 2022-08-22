@@ -1,5 +1,9 @@
+import synopsis from '../../components/synopsis'
 export default {
     name: 'Page3',
+    components : {
+      synopsis
+    },
     mounted(){
       const sun = document.querySelector('.sun')
       const moon = document.querySelector('.moon')

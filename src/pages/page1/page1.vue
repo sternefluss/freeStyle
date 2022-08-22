@@ -3,6 +3,7 @@
 <!-- 解决方法：再template下添加一个最大的div即可 -->
 <div class="canvas">              
     <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">     -->
+    <synopsis text="这是个tabbar样式组件，点击切换图标位置" color="#e4dccf"></synopsis>
     <div class="container">
         <ul>
             <li class="list active">

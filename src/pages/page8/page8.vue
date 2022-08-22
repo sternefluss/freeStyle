@@ -1,5 +1,6 @@
 <template>
     <div class="canvas">
+        <synopsis text="播放器组件，歌曲列表已预设，展开可控制上下首和音量(ps：歌曲加载可能需要时间)" color="palevioletred"></synopsis>
         <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/c/font_3539158_6x7i6uak0v.css">
         <div class="container">
             <button class="open iconfont icon-xiangshang" @click="openDetails()"></button>

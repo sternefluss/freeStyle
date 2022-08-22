@@ -1,9 +1,14 @@
+import synopsis from '../../components/synopsis'
 export default {
     name: 'Page3',
     data () {
       return {
         isopeneye : false,
+        titleColor : ''
       }
+    },
+    components :{
+        synopsis
     },
     // vue挂载到元素上的点击事件
     methods : {
@@ -12,10 +17,12 @@ export default {
             if(this.isopeneye == false){
                 this.isopeneye = true
                 ipt.type = 'text'
+                this.titleColor = 'white'
             }
             else{
                 this.isopeneye = false
                 ipt.type = 'password'
+                this.titleColor = 'black'
             }
         }
     },

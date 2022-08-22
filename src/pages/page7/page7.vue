@@ -1,5 +1,6 @@
 <template>
     <div class="canvas">
+        <synopsis text="这是只是个时钟，不能交互" color="pink"></synopsis>
         <div class="container">
             <div class="clock">
                 <div class="hour"></div>

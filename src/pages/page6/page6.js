@@ -1,4 +1,5 @@
 import {getMusicInfoApi , playMusicApi} from  '../../request/api.js'
+import synopsis from '../../components/synopsis'
 export default {
     name: 'Page3',
     data () {
@@ -9,6 +10,9 @@ export default {
             pageCount : '',
             btnshow : false
         }
+    },
+    components :{
+        synopsis
     },
     methods : {
         get(){
