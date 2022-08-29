@@ -23,3 +23,5 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 #更新日志
 edition 1.2.0
 本次更新增加了各个界面的简介，使页面操作清晰易懂
+
+#！！！！！！网易云的接口炸了，部分界面功能可能无法实现！！！！！！#
