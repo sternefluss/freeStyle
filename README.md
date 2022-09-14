@@ -24,8 +24,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 edition 1.2.0
 本次更新增加了各个界面的简介，使页面操作清晰易懂
 
-#！！！！！！突发情况！！！！！！#
-#！！！！！！网易云的接口炸了，部分界面功能可能无法实现！！！！！！#
-#！！！！！！网易云的接口炸了，部分界面功能可能无法实现！！！！！！#
-#！！！！！！网易云的接口炸了，部分界面功能可能无法实现！！！！！！#
-#！！！！！！正在找原因！！！！！！#
+#注意事项#
+本项目的部分功能需要部署网易云api后端接口后才能实现
+由于vercel最近被ban了所以需要使用node手动部署
+注意部署完毕后打开文件src->request->request.js修改端口地址
+后端下载地址：https://github.com/sternefluss/NeteaseCloudMusicApi
